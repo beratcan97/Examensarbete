@@ -18,7 +18,6 @@ export class CreateAdvertisementComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    alert('runs!');
     this.firestore.collection('todo').add(this.todo);
   }
 
