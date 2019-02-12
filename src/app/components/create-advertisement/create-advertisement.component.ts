@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-create-advertisement',
@@ -9,16 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class CreateAdvertisementComponent implements OnInit {
 
   todo = {
-    text: "Learn Firebase",
-    completed: false
+    text: "new project",
+    completed: true
   }
 
   constructor(
-    //private firestore: AngularFirestore
+    private firestore: AngularFirestore
   ) { }
 
   ngOnInit() {
-    //this.firestore.collection('todo').add(this.todo);
+    alert('runs!');
+    this.firestore.collection('todo').add(this.todo);
   }
 
 }
