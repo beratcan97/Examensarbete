@@ -15,9 +15,11 @@ import { environment } from 'src/environments/environment';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { CreateAdvertisementComponent } from './components/create-advertisement/create-advertisement.component';
+import { ReadAdvertisementComponent } from './components/read-advertisement/read-advertisement.component';
 
 const appRoutes: Routes = [
   { path: 'create-advertisement', component: CreateAdvertisementComponent },
+  { path: 'read-advertisement', component: ReadAdvertisementComponent },
 ];
 
 @NgModule({
@@ -25,6 +27,7 @@ const appRoutes: Routes = [
     AppComponent,
     TopBarComponent,
     CreateAdvertisementComponent,
+    ReadAdvertisementComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes, { useHash: true }),
