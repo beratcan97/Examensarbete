@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 
+//Forms
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 //Firebase
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -21,7 +24,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     TopBarComponent,
-    CreateAdvertisementComponent
+    CreateAdvertisementComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes, { useHash: true }),
@@ -30,6 +33,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
