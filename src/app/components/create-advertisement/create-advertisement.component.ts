@@ -11,11 +11,12 @@ import { Router } from '@angular/router';
 export class CreateAdvertisementComponent implements OnInit {
 
   myForm: FormGroup;
+  dateDATA = new Date();
 
   constructor(
     private firestore: AngularFirestore,
     private fb: FormBuilder,
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -35,6 +36,7 @@ export class CreateAdvertisementComponent implements OnInit {
       heading: '',
       text: '',
       price: '',
+      date: this.dateDATA.getFullYear() + '-' + (this.dateDATA.getMonth() + 1) + '-' + this.dateDATA.getDate(),
     })
   }
 

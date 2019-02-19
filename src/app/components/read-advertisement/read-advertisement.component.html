@@ -1,14 +1,30 @@
-<div *ngFor="let advertisement of DATA">
-  <h3>{{advertisement.heading}}</h3>
-  <p>{{advertisement.text}}</p>
+<div class="d-flex justify-content-center mt-3" *ngFor="let advertisement of DATA">
+  <div class="card text-center" style="width: 18rem;">
+    <div class="card-header"><b>{{advertisement.label}}</b></div>
+    <img class="card-img-top" src="https://www.raynerealtyonline.com/assets/images/image-not-available.jpg"
+      alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{advertisement.heading}}</h5>
+      <p class="card-text">{{advertisement.text.slice(0,100)}}...</p>
+      <div class="collapse" id="{{advertisement.registration}}">
+        <p class="card-text"><b>Namn: </b>{{advertisement.name}}</p>
+        <p class="card-text"><b>E-post: </b>{{advertisement.email}}</p>
+        <p class="card-text"><b>Telefon: </b>{{advertisement.phone}}</p>
+        <p class="card-text"><b>Plats: </b>{{advertisement.place}}</p>
+        <p class="card-text"><b>Regnr: </b>{{advertisement.registration}}</p>
+        <p class="card-text"><b>Märke: </b>{{advertisement.label}}</p>
+        <p class="card-text"><b>Model: </b>{{advertisement.model}}</p>
+        <p class="card-text"><b>Årsmodel: </b>{{advertisement.modelYear}}</p>
+        <p class="card-text"><b>Miltal: </b>{{advertisement.mileage}}</p>
+        <p class="card-text"><b>Kaross: </b>{{advertisement.body}}</p>
+        <p class="card-text"><b>Växellåda: </b>{{advertisement.gearbox}}</p>
+        <p class="card-text"><b>Bränsle: </b>{{advertisement.fuel}}</p>
+        <p class="card-text"><b>Pris: {{advertisement.price}} Kr</b></p>
+      </div>
+
+      <a class="btn btn-primary" data-toggle="collapse" href="#{{advertisement.registration}}" role="button"
+        aria-expanded="false" aria-controls="collapseExample">See more!</a>
+    </div>
+    <div class="card-footer text-muted">{{advertisement.date}}</div>
+  </div>
 </div>
-
-
-
-
-<hr>
-
-
-
-
-{{this.DATA | json}}
