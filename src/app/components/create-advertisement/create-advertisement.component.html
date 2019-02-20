@@ -1,63 +1,75 @@
-<form [formGroup]="myForm">
-  <div class="form-group">
-    <label for="name">Namn</label>
-    <input type="text" class="form-control" id="name" placeholder="Namn" formControlName="name">
-  </div>
-  <div class="form-group">
-    <label for="email">E-post</label>
-    <input type="email" class="form-control" id="email" placeholder="E-post" formControlName="email">
-  </div>
-  <div class="form-group">
-    <label for="phone">Telefon</label>
-    <input type="number" class="form-control" id="phone" placeholder="Telefon" formControlName="phone">
-  </div>
-  <div class="form-group">
-    <label for="place">Plats</label>
-    <input type="text" class="form-control" id="place" placeholder="Plats" formControlName="place">
-  </div>
-  <div class="form-group">
-    <label for="registration">Regnr</label>
-    <input type="text" class="form-control" id="registration" placeholder="Regnr" formControlName="registration">
-  </div>
-  <div class="form-group">
-    <label for="label">Märke</label>
-    <input type="text" class="form-control" id="label" placeholder="Märke" formControlName="label">
-  </div>
-  <div class="form-group">
-    <label for="model">Model</label>
-    <input type="text" class="form-control" id="model" placeholder="Model" formControlName="model">
-  </div>
-  <div class="form-group">
-    <label for="modelYear">Modellår</label>
-    <input type="number" class="form-control" id="modelYear" placeholder="Modellår" formControlName="modelYear">
-  </div>
-  <div class="form-group">
-    <label for="mileage">Miltal</label>
-    <input type="number" class="form-control" id="mileage" placeholder="Miltal" formControlName="mileage">
-  </div>
-  <div class="form-group">
-    <label for="body">Karosstyp</label>
-    <input type="text" class="form-control" id="body" placeholder="Karosstyp" formControlName="body">
-  </div>
-  <div class="form-group">
-    <label for="gearbox">Växellåda</label>
-    <input type="text" class="form-control" id="gearbox" placeholder="Växellåda" formControlName="gearbox">
-  </div>
-  <div class="form-group">
-    <label for="fuel">Bränsle</label>
-    <input type="text" class="form-control" id="fuel" placeholder="Bränsle" formControlName="fuel">
-  </div>
-  <div class="form-group">
-    <label for="heading">Rubrik</label>
-    <input type="text" class="form-control" id="heading" placeholder="Rubrik" formControlName="heading">
-  </div>
-  <div class="form-group">
-    <label for="text">Text</label>
-    <input type="text" class="form-control" id="text" placeholder="Text" formControlName="text">
-  </div>
-  <div class="form-group">
-    <label for="price">Pris</label>
-    <input type="number" class="form-control" id="price" placeholder="Pris" formControlName="price">
-  </div>
-  <button type="submit" class="btn btn-primary" (click)="createAdvertisement()">Submit</button>
-</form>
+<div class="d-flex justify-content-center">
+  <form [formGroup]="myForm">
+    <div class="form-group">
+      <label for="name">Namn</label>
+      <input type="text" class="form-control" id="name" placeholder="Namn" formControlName="name">
+    </div>
+    <div class="form-group">
+      <label for="email">E-post</label>
+      <input type="email" class="form-control" id="email" placeholder="E-post" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label for="phone">Telefon</label>
+      <input type="number" class="form-control" id="phone" placeholder="Telefon" formControlName="phone">
+    </div>
+    <div class="form-group">
+      <label for="place">Plats</label>
+      <select class="form-control" id="place" placeholder="Plats" formControlName="place">
+        <option *ngFor="let place of places" [value]="place">{{place}} län</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="registration">Regnr</label>
+      <input type="text" class="form-control" id="registration" placeholder="Regnr" formControlName="registration">
+    </div>
+    <div class="form-group">
+      <label for="label">Märke</label>
+      <select class="form-control" id="label" placeholder="Märke" formControlName="label">
+        <option *ngFor="let label of labels" [value]="label">{{label}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="model">Model</label>
+      <input type="text" class="form-control" id="model" placeholder="Model" formControlName="model">
+    </div>
+    <div class="form-group">
+      <label for="modelYear">Modellår</label>
+      <input type="number" class="form-control" id="modelYear" placeholder="Modellår" formControlName="modelYear">
+    </div>
+    <div class="form-group">
+      <label for="mileage">Miltal</label>
+      <input type="number" class="form-control" id="mileage" placeholder="Miltal" formControlName="mileage">
+    </div>
+    <div class="form-group">
+      <label for="body">Karosstyp</label>
+      <select class="form-control" id="body" placeholder="Karosstyp" formControlName="body">
+        <option *ngFor="let body of bodys" [value]="body">{{body}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="gearbox">Växellåda</label>
+      <select class="form-control" id="gearbox" placeholder="Växellåda" formControlName="gearbox">
+        <option *ngFor="let gearbox of gearboxes" [value]="gearbox">{{gearbox}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="fuel">Bränsle</label>
+      <select class="form-control" id="fuel" placeholder="Bränsle" formControlName="fuel">
+        <option *ngFor="let fuel of fuels" [value]="fuel">{{fuel}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="heading">Rubrik</label>
+      <input type="text" class="form-control" id="heading" placeholder="Rubrik" formControlName="heading">
+    </div>
+    <div class="form-group">
+      <label for="text">Text</label>
+      <input type="text" class="form-control" id="text" placeholder="Text" formControlName="text">
+    </div>
+    <div class="form-group">
+      <label for="price">Pris</label>
+      <input type="number" class="form-control" id="price" placeholder="Pris" formControlName="price">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="createAdvertisement()">Submit</button>
+  </form>
+</div>
