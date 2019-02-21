@@ -18,6 +18,7 @@ import { CreateAdvertisementComponent } from './components/create-advertisement/
 import { ReadAdvertisementComponent } from './components/read-advertisement/read-advertisement.component';
 import { SearchAdvertisementComponent } from './components/search-advertisement/search-advertisement.component';
 import { MyAdvertisementComponent } from './components/my-advertisement/my-advertisement.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const appRoutes: Routes = [
   { path: 'create-advertisement', component: CreateAdvertisementComponent },
@@ -34,6 +35,7 @@ const appRoutes: Routes = [
     ReadAdvertisementComponent,
     SearchAdvertisementComponent,
     MyAdvertisementComponent,
+    FooterComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes, { useHash: true }),
