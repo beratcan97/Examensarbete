@@ -18,6 +18,9 @@ export class ReadAdvertisementComponent implements OnInit {
   ngOnInit() {
     this.service.getAdvertisement().subscribe(items => {
       this.DATA = items.map(item => {
+
+        //console.log(item.payload.doc.id);
+
         return item.payload.doc.data()
       })
     });

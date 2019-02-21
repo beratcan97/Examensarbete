@@ -47,7 +47,14 @@ export class CreateAdvertisementComponent implements OnInit {
   }
 
   createAdvertisement() {
-    this.firestore.collection('advertisement').add(this.myForm.value);
-    this.router.navigate(['']);
+    this.firestore.collection('advertisement').add(this.myForm.value)
+      .then(
+        res => {
+          this.router.navigate(['']);
+        }
+      ),
+      err => {
+        console.log(err);
+      }
   };
 }

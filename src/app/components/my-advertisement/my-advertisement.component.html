@@ -1,3 +1,9 @@
-<p>
-  my-advertisement works!
-</p>
+<div class="d-flex justify-content-center">
+    <form [formGroup]="keyForm">
+        <div class="form-group">
+            <label for="key">Key</label>
+            <input type="text" class="form-control" id="key" placeholder="Key" formControlName="key">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="delete()">Submit</button>
+    </form>
+</div>
