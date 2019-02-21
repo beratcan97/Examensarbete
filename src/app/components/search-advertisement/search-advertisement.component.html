@@ -1,3 +1,57 @@
-<p>
-  search-advertisement works!
-</p>
+<div class="d-flex justify-content-center">
+  <form [formGroup]="searchForm">
+    <div class="form-group">
+      <label for="searchCategory">Plats</label>
+      <select class="form-control" id="searchCategory" placeholder="searchCategory" formControlName="searchCategory">
+        <option *ngFor="let searchCategory of searchCategories" [value]="searchCategory">{{searchCategory}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="searchForm">Sök</label>
+      <input type="text" class="form-control" id="searchForm" placeholder="Sök" formControlName="searchTerm">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="search()">Sök</button>
+  </form>
+</div>
+
+<div>
+  <div class="container">
+    <div class="card-deck d-flex justify-content-center">
+      <div class="d-flex justify-content-center mt-3" *ngFor="let advertisement of DATA">
+        <div class="card text-center" style="width: 18rem;">
+          <div class="card-header"><b>{{advertisement.label}}</b></div>
+          <img class="card-img-top" src="https://www.raynerealtyonline.com/assets/images/image-not-available.jpg"
+            alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{advertisement.heading}}</h5>
+            <p class="card-text">{{advertisement.text.slice(0,10)}}...</p>
+
+            <p class="card-text">{{advertisement.key}}</p>
+
+            <div class="collapse" id="{{advertisement.registration}}">
+              <p class="card-text">{{advertisement.text}}</p>
+              <p class="card-text"><b>Namn: </b>{{advertisement.name}}</p>
+              <p class="card-text"><b>E-post: </b>{{advertisement.email}}</p>
+              <p class="card-text"><b>Telefon: </b>{{advertisement.phone}}</p>
+              <p class="card-text"><b>Plats: </b>{{advertisement.place}}</p>
+              <p class="card-text"><b>Regnr: </b>{{advertisement.registration}}</p>
+              <p class="card-text"><b>Märke: </b>{{advertisement.label}}</p>
+              <p class="card-text"><b>Model: </b>{{advertisement.model}}</p>
+              <p class="card-text"><b>Årsmodel: </b>{{advertisement.modelYear}}</p>
+              <p class="card-text"><b>Miltal: </b>{{advertisement.mileage}}</p>
+              <p class="card-text"><b>Kaross: </b>{{advertisement.body}}</p>
+              <p class="card-text"><b>Växellåda: </b>{{advertisement.gearbox}}</p>
+              <p class="card-text"><b>Bränsle: </b>{{advertisement.fuel}}</p>
+              <p class="card-text"><b>Pris: {{advertisement.price}} Kr</b></p>
+            </div>
+
+            <a class="btn btn-primary" data-toggle="collapse" href="#{{advertisement.registration}}" role="button"
+              aria-expanded="false" aria-controls="collapseExample">See more!</a>
+          </div>
+          <div class="card-footer text-muted">{{advertisement.date}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
