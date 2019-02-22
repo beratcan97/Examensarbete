@@ -19,12 +19,14 @@ import { ReadAdvertisementComponent } from './components/read-advertisement/read
 import { SearchAdvertisementComponent } from './components/search-advertisement/search-advertisement.component';
 import { MyAdvertisementComponent } from './components/my-advertisement/my-advertisement.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { StartComponent } from './components/start/start.component';
 
 const appRoutes: Routes = [
   { path: 'create-advertisement', component: CreateAdvertisementComponent },
   { path: 'read-advertisement', component: ReadAdvertisementComponent },
   { path: 'search-advertisement', component: SearchAdvertisementComponent },
   { path: 'my-advertisement', component: MyAdvertisementComponent },
+  { path: '', component: StartComponent },
 ];
 
 @NgModule({
@@ -36,6 +38,7 @@ const appRoutes: Routes = [
     SearchAdvertisementComponent,
     MyAdvertisementComponent,
     FooterComponent,
+    StartComponent,
   ],
   imports: [
     RouterModule.forRoot(appRoutes, { useHash: true }),
