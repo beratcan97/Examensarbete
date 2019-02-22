@@ -1,9 +1,10 @@
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center flex-column mx-3">
+    <h3>Ta bort annons</h3>
     <form [formGroup]="keyForm">
         <div class="form-group">
-            <label for="key">Key</label>
-            <input type="text" class="form-control" id="key" placeholder="Key" formControlName="key">
+            <label for="key">Annons nummer</label>
+            <input type="text" class="form-control" id="key" placeholder="Annons nummer" formControlName="key">
         </div>
-        <button type="submit" class="btn btn-primary" (click)="delete()">Submit</button>
+        <button type="submit" class="btn btn-primary" (click)="delete()">Sök</button>
     </form>
 </div>

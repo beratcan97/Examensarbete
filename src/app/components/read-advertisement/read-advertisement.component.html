@@ -2,7 +2,7 @@
   <div class="container">
     <div class="card-deck d-flex justify-content-center">
       <div class="d-flex justify-content-center" *ngFor="let advertisement of DATA">
-        <div class="card text-center" style="width: 18rem;">
+        <div class="card text-center mx-3">
           <div class="card-header"><b>{{advertisement.label}}</b></div>
           <img class="card-img-top" src="https://www.raynerealtyonline.com/assets/images/image-not-available.jpg"
             alt="Card image cap">
@@ -30,7 +30,7 @@
             </div>
 
             <a class="btn btn-primary" data-toggle="collapse" href="#{{advertisement.registration}}" role="button"
-              aria-expanded="false" aria-controls="collapseExample">See more!</a>
+              aria-expanded="false" aria-controls="collapseExample">Mer!</a>
           </div>
           <div class="card-footer text-muted">{{advertisement.date}}</div>
         </div>
