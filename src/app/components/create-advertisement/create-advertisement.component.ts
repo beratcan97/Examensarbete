@@ -13,7 +13,7 @@ export class CreateAdvertisementComponent implements OnInit {
   myForm: FormGroup;
   dateDATA = new Date();
 
-  labels = ['Volvo', 'Volkswagen', 'Mercedes-Benz', 'BMW', 'Audi', 'Ford', 'Renault', 'Chevrolet', 'SEAT', 'Hyundai', 'Honda', 'Citroen', 'Annat'];
+  labels = ['Volvo', 'Volkswagen', 'Mercedes-Benz', 'BMW', 'Audi', 'Ford', 'Renault', 'Chevrolet', 'SEAT', 'Hyundai', 'Honda', 'Citroen', 'Peugeot', 'Annat'];
   fuels = ['Bensin', 'Diesel', 'El', 'Miljöbränsle/Hybrid'];
   bodys = ['Småbil', 'Sedan', 'Halvkombi', 'Kombi', 'Coupe', 'Cab', 'SUV', 'Familjebuss', 'Yrkesfordon'];
   gearboxes = ['Automat', 'Manuell'];
