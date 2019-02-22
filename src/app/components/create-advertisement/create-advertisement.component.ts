@@ -12,6 +12,7 @@ export class CreateAdvertisementComponent implements OnInit {
 
   myForm: FormGroup;
   dateDATA = new Date();
+  customKey = Math.floor((Math.random() * 8999) + 1000);
 
   labels = ['Volvo', 'Volkswagen', 'Mercedes-Benz', 'BMW', 'Audi', 'Ford', 'Renault', 'Chevrolet', 'SEAT', 'Hyundai', 'Honda', 'Citroen', 'Peugeot', 'Annat'];
   fuels = ['Bensin', 'Diesel', 'El', 'Miljöbränsle/Hybrid'];
@@ -43,6 +44,7 @@ export class CreateAdvertisementComponent implements OnInit {
       text: '',
       price: '',
       date: this.dateDATA.getFullYear() + '-' + (this.dateDATA.getMonth() + 1) + '-' + this.dateDATA.getDate(),
+      customKey: this.customKey,
     })
   }
 

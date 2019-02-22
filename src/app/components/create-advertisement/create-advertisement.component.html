@@ -70,6 +70,9 @@
       <label for="price">Pris</label>
       <input type="number" class="form-control" id="price" placeholder="Pris" formControlName="price">
     </div>
+    <h6>Din privata nyckel</h6>
+    <p class="mb-0">{{this.customKey}}</p>
+    <p class="text-muted">Skriv när den 4 sifriga koden!</p>
     <button type="submit" class="btn btn-primary" (click)="createAdvertisement()">Submit</button>
   </form>
 </div>
