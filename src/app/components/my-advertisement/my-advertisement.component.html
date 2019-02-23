@@ -2,9 +2,10 @@
     <h3>Ta bort annons</h3>
     <form [formGroup]="keyForm">
         <div class="form-group">
-            <label for="key">Annons nummer</label>
-            <input type="text" class="form-control" id="key" placeholder="Annons nummer" formControlName="key">
+            <label for="customKey">Din fyr siffriga kod</label>
+            <input type="number" class="form-control" id="customKey" placeholder="Din fyr siffriga kod"
+                formControlName="customKey">
         </div>
-        <button type="submit" class="btn btn-primary" (click)="delete()">Sök</button>
+        <button type="submit" class="btn btn-primary" (click)="getKey()">Sök</button>
     </form>
 </div>
