@@ -1,8 +1,8 @@
 <div class="d-flex justify-content-center flex-column mx-3">
   <form [formGroup]="searchForm">
     <div class="form-group">
-      <label for="searchCategory">Plats</label>
-      <select class="form-control" id="searchCategory" placeholder="searchCategory" formControlName="searchCategory">
+      <label for="searchCategory">Välj kategori</label>
+      <select class="form-control" id="searchCategory" placeholder="Välj kategori" formControlName="searchCategory">
         <option *ngFor="let searchCategory of searchCategories" [value]="searchCategory">{{searchCategory}}</option>
       </select>
     </div>
