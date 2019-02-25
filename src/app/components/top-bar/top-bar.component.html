@@ -8,19 +8,54 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" (click)="navigate('/read-advertisement')">Alla annonser</a>
+        <a class="nav-link" (click)="navigate('/read-advertisement')">
+          <div class="d-flex flex-row">
+            <div class="mr-2">
+              <i class="fas fa-users"></i>
+            </div>
+            Alla annonser
+          </div>
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" (click)="navigate('/create-advertisement')">Skapa annons</a>
+        <a class="nav-link" (click)="navigate('/create-advertisement')">
+          <div class="d-flex flex-row">
+            <div class="mr-3">
+              <i class="fas fa-plus"></i>
+            </div>
+            Skapa annons
+          </div>
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" (click)="navigate('/search-advertisement')">Sök annons</a>
+        <a class="nav-link" (click)="navigate('/search-advertisement')">
+          <div class="d-flex flex-row">
+            <div class="mr-3">
+              <i class="fas fa-search"></i>
+            </div>
+            Sök annons
+          </div>
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" (click)="navigate('/my-advertisement')">Mina annonser</a>
+        <a class="nav-link" (click)="navigate('/my-advertisement')">
+          <div class="d-flex flex-row">
+            <div class="mr-3">
+              <i class="fas fa-user"></i>
+            </div>
+            Mina annonser
+          </div>
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" (click)="navigate('/aboutComponent')">Om oss</a>
+        <a class="nav-link" (click)="navigate('/aboutComponent')">
+          <div class="d-flex flex-row">
+            <div class="mr-4">
+              <i class="fas fa-info"></i>
+            </div>
+            Om oss
+          </div>
+        </a>
       </li>
     </ul>
   </div>
