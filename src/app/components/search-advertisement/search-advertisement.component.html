@@ -3,7 +3,9 @@
     <div class="form-group">
       <label for="searchCategory">Välj kategori</label>
       <select class="form-control" id="searchCategory" placeholder="Välj kategori" formControlName="searchCategory">
-        <option *ngFor="let searchCategory of searchCategories" [value]="searchCategory">{{searchCategory}}</option>
+        <option *ngFor="let searchCategory of searchCategories; let i = index" [value]="searchCategory">
+          {{searchCategoriesSwedish[i]}}
+        </option>
       </select>
     </div>
 

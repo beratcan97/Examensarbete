@@ -14,6 +14,7 @@ export class SearchAdvertisementComponent implements OnInit {
   DATA;
   searchForm: FormGroup;
   searchCategories = ['name', 'email', 'phone', 'place', 'registration', 'label', 'model', 'modelYear', 'mileage', 'body', 'gearbox', 'fuel', 'heading', 'text', 'price', 'date'];
+  searchCategoriesSwedish = ['Namn', 'e-post', 'Telefon', 'Län', 'Reg nummer', 'Märke', 'Modell', 'Årsmodell', 'Miltal', 'Kaross', 'Växellåda', 'Drivmedel', 'Rubrik', 'Beskrivning', 'Pris', 'Datum'];
 
   constructor(
     private firestore: AngularFirestore,
